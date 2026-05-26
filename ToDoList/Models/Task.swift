@@ -24,4 +24,8 @@ struct Task: Identifiable, Hashable {
 		self.details = details
 	}
 	
+	static func example() -> [Task]{
+		return [Task(title: "example", isCompleted: false, due: Date(), details: "test")]
+	}
+
 }
