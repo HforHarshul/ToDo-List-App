@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task: Identifiable {
+struct Task: Identifiable, Hashable {
 	let id = UUID() // This is fixed; user cannot change it
 	var title: String // syntax to define a variable: "var" <name of the variable> ":" <type of variable>
 	var isComplete: Bool

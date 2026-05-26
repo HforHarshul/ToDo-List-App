@@ -7,7 +7,15 @@
 
 import Foundation
 
-enum TaskSection: Identifiable {
+enum TaskSection: Identifiable, CaseIterable, Hashable {
+	static func == (lhs: TaskSection, rhs: TaskSection) -> Bool {
+		lhs.id == rhs.id
+	}
+	
+	static var allCases: [TaskSection]{
+		[.all, .done, .upcoming]
+	}
+	
 	case all
 	case done
 	case upcoming

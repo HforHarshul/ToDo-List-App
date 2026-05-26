@@ -8,7 +8,7 @@
 import Foundation
 // Foundation is a core Apple framework. it has data types that are not a part of Swift language
 
-struct TaskGroup: Identifiable {
+struct TaskGroup: Identifiable, Hashable {
 	var id = UUID()
 	let title: String // cannot change the title once set ("let" not "var")
 	let creationDate: Date
