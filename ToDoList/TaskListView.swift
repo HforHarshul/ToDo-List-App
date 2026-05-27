@@ -12,7 +12,12 @@ struct TaskListView: View {
 	let tasks: [Task]
 
 	var body: some View{
-		Text("Hello")
+		List(tasks){ task in
+			HStack{
+				Image(systemName: task.isComplete ? "largecircle.fill.circle" : "circle")
+				Text(task.title)
+			}
+		}
 	}
 }
 
